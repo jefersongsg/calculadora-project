@@ -15,14 +15,14 @@
   align-items: center;
   justify-content: center;
   height: 430px;
-  width: 270px;
+  width: 265px;
   background-color: #4a4a4a;
   border-radius: 30px;
-  box-shadow: rgba(9, 9, 9, 0.5) 10px 10px 10px 10px;
+  box-shadow:#000000 0px -5px 0px 5px inset;
   
   input{
     width: 220px;
-    height: 60px;
+    height: 70px;
     font-size: 25px;
     padding: 15px;
     border: none;
@@ -30,7 +30,7 @@
     background-color: #8c8b8b;
     text-align: end;
     color: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 15px inset;
+    box-shadow: #e6e508 -2px -3px 13px 7px inset;
   }
  `;
 
@@ -84,7 +84,7 @@
     font-size: 20px;
     background-color: #b4b4b4;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.3) 4px 5px 15px inset;
+    box-shadow: rgba(0, 0, 0, 0.3) -4px 4px 5px 0px inset;
   }
 
   button:hover{
