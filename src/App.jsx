@@ -8,6 +8,9 @@ function App() {
 
   const handleNumberClick = (value) => {
     const input = document.getElementById("num");
+    if (value === "." && currentValue.includes(".")) {
+      return; // Impede múltiplos pontos
+    }
     currentValue += value;
     input.value = currentValue;
   };
@@ -44,7 +47,7 @@ function App() {
         default:
           result = "Erro";
       }
-      input.value = result.toFixed(); // Arredonda para 3 casas decimais
+      input.value = result; // Arredonda para 3 casas decimais
       currentValue = result.toString();
       previousValue = input.value ;
       operator = input.value ;
@@ -61,7 +64,7 @@ function App() {
   return (
     <Div>
       <Container>
-        <input type="number" id="num" placeholder="0" disabled/>
+        <input type="text" id="num" placeholder="0" disabled/>
           <Buttons>
             <button onClick={() => handleNumberClick("1") }>1</button>
             <button onClick={() => handleNumberClick("2")} >2</button>
@@ -73,6 +76,7 @@ function App() {
             <button onClick={() => handleNumberClick("8")} >8</button>
             <button onClick={() => handleNumberClick("9")} >9</button>
             <button onClick={() => handleNumberClick("0")} >0</button>
+            <button onClick={() => handleNumberClick(".")} >.</button>
             <button onClick={() => handleOperatorClick("+")} id="soma">+</button>
             <button onClick={() => handleOperatorClick("-")} id="sub">-</button>
             <button onClick={() => handleOperatorClick("*")} id="mult">*</button>
