@@ -5,8 +5,7 @@
  align-items: center;
  justify-content: center;
  height: 100vh;
- background-color: #7749e1;
- 
+  background-image: linear-gradient(#000000,#222222 ,#4a4a4a);
  `;
     
  export const Container = styled.div`
